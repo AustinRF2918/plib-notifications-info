@@ -1,6 +1,6 @@
 @import "generation";
 
-@mixin _notificationContainer_header_headerStylization(){
+@mixin _notificationInformation_header_headerStylization(){
     font-family: "Source Sans Pro";
     color: black;
     padding-top: 20px;
@@ -9,9 +9,9 @@
     }
 }
 
-@include _notificationContainer_header_generateHeader(".food-message");
+@include _notificationInformation_header_generateHeader(".food-message");
 
-@mixin _notificationContainer_header_navStylization(){
+@mixin _notificationInformation_header_navStylization(){
     font-family: "Source Sans Pro";
     color: lighten(black, 60%);
     &:hover{
@@ -19,7 +19,7 @@
     }
 }
 
-@mixin _notificationContainer_header_navActiveStylization(){
+@mixin _notificationInformation_header_navActiveStylization(){
     font-family: "Source Sans Pro";
     color: black;
     font-weight: 700;
@@ -28,9 +28,9 @@
     }
 }
 
-@include _notificationContainer_header_generateNavStyle(".food-navigation");
+@include _notificationInformation_header_generateNavStyle(".food-navigation");
 
-@mixin _notificationContainer_header_locationStylization() {
+@mixin _notificationInformation_header_locationStylization() {
     font-weight: 700;
     font-family: "Source Sans Pro";
     color: black;
@@ -46,9 +46,9 @@
     }
 }
 
-@include _notificationContainer_header_generateLocationStyle(".iteration-location")
+@include _notificationInformation_header_generateLocationStyle(".iteration-location")
 
-@mixin _notificationContainer_header_subheaderStylization() {
+@mixin _notificationInformation_header_subheaderStylization() {
     * {
         font-family: "Source Sans Pro";
 	font-weight: 600;
@@ -56,18 +56,57 @@
     }
 };
 
-@mixin _notificationContainer_header_subheaderParentStylization() {
+@mixin _notificationInformation_header_subheaderParentStylization() {
     color: #2196F3;
 };
 
-@mixin _notificationContainer_header_subheaderDividerStylization() {
+@mixin _notificationInformation_header_subheaderDividerStylization() {
     margin-left: 5px;
     margin-right: 5px;
     color: lighten(black, 60%);
 };
 
-@mixin _notificationContainer_header_subheaderDataStylization() {
+@mixin _notificationInformation_header_subheaderDataStylization() {
     color: black;
 };
 
-@include _notificationContainer_header_generateSubheaderNavigation(".food-message-location");
+@include _notificationInformation_header_generateSubheaderNavigation(".food-message-location");
+
+@mixin _notificationInformation_header_subheaderButtonContainerStyles(){
+};
+
+@mixin _notificationInformation_header_subheaderButtonStyles(){
+    * {
+        font-family: "Source Sans Pro";
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 0 !important;
+	border: none;
+	border-radius: 0px !important;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	outline: 0;
+	padding: 0 1rem;
+	vertical-align: middle;
+	-webkit-tap-highlight-color: transparent;
+	background: darken(#fff, 20%);
+	color: white;
+	text-align: center;
+	letter-spacing: .5px;
+	transition: .2s ease-out;
+	cursor: pointer;
+    }
+
+    a:hover{
+	background: white;
+	text-decoration: none;
+    }
+
+    .archive-button {
+	margin-right: 10px !important;
+    }
+};
+
+@include _notificationInformation_header_generateSubheaderActionButtons(".button-container");
+

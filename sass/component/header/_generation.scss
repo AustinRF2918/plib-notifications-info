@@ -1,60 +1,76 @@
 //header::generateHeader: takes selector of our generated header (inside
 //of our pug mixin and uses an iterface which includes defining the mixin
-//_notificationContainer_header_headerStylization() to stylize it's internal
+//_notificationInformation_header_headerStylization() to stylize it's internal
 //contents.
-@mixin _notificationContainer_header_generateHeader($selector) {
+@mixin _notificationInformation_header_generateHeader($selector) {
     #{$selector}{
-      @warn("Utilizing _notificationContainer_header_generateHeader requires the mixin");
-      @warn("_notificationContainer_header_headerStylization to be defined.");
-      @include _notificationContainer_header_headerStylization();
+      @warn("Utilizing _notificationInformation_header_generateHeader requires the mixin");
+      @warn("_notificationInformation_header_headerStylization to be defined.");
+      @include _notificationInformation_header_headerStylization();
     }
 }
 
 //header::generateNavStyle: takes selector of our generated navs (inside
 //of our pug mixin and uses an iterface which includes defining the mixin
-//_notificationContainer_header_navStylization() and _notification_header_navActive
+//_notificationInformation_header_navStylization() and _notification_header_navActive
 //Stylization() to stylize it's internal contents.
 //contents.
-@mixin _notificationContainer_header_generateNavStyle($selector) {
+@mixin _notificationInformation_header_generateNavStyle($selector) {
     #{$selector}{
-      @warn("Utilizing _notificationContainer_header_generateHeader requires the mixin");
-      @warn("_notificationContainer_header_navStylization() and _notification_header_navActiveStylization() to be defined.");
-      @include _notificationContainer_header_navStylization();
+      @warn("Utilizing _notificationInformation_header_generateHeader requires the mixin");
+      @warn("_notificationInformation_header_navStylization() and _notification_header_navActiveStylization() to be defined.");
+      @include _notificationInformation_header_navStylization();
       &-active{
-        @include _notificationContainer_header_navActiveStylization();
+        @include _notificationInformation_header_navActiveStylization();
       }
     }
 }
 
 //header::generateSubheaderNavigation: takes selector of our generated navs (inside
 //of our pug mixin and uses an iterface which includes defining the mixin
-//_notificationContainer_header_subheaderStylization() 
-@mixin _notificationContainer_header_generateSubheaderNavigation($selector) {
+//_notificationInformation_header_subheaderStylization() 
+@mixin _notificationInformation_header_generateSubheaderNavigation($selector) {
     #{$selector}{
-      @warn("Utilizing _notificationContainer_header_generateSubheaderNavigation requires the mixins");
-      @warn("_notificationContainer_header_subheaderStylization(), _notificationContainer_header_subheaderDividerStylization() and _notificationContainer_header_subheaderDataStylization() to be defined.");
-      @include _notificationContainer_header_subheaderStylization();
+      @warn("Utilizing _notificationInformation_header_generateSubheaderNavigation requires the mixins");
+      @warn("_notificationInformation_header_subheaderStylization(), _notificationContainer_header_subheaderDividerStylization() and _notificationContainer_header_subheaderDataStylization() to be defined.");
+      @include _notificationInformation_header_subheaderStylization();
       .current-parent{
-        @include _notificationContainer_header_subheaderParentStylization();
+        @include _notificationInformation_header_subheaderParentStylization();
       }
 
       .current-divider{
-        @include _notificationContainer_header_subheaderDividerStylization();
+        @include _notificationInformation_header_subheaderDividerStylization();
       }
 
       .current-data{
-        @include _notificationContainer_header_subheaderDataStylization();
+        @include _notificationInformation_header_subheaderDataStylization();
       }
     }
 }
 
 //header::generateLocationStyle: takes selector of our generated navs (inside
 //of our pug mixin and uses an iterface which includes defining the mixin
-//_notificationContainer_header_locationStylization() 
-@mixin _notificationContainer_header_generateLocationStyle($selector) {
+//_notificationInformation_header_locationStylization() 
+@mixin _notificationInformation_header_generateLocationStyle($selector) {
     #{$selector}{
-      @warn("Utilizing _notificationContainer_header_generateHeader requires the mixin");
-      @warn("_notificationContainer_header_locationStylization to be defined.");
-      @include _notificationContainer_header_locationStylization();
+      @warn("Utilizing _notificationInformation_header_generateHeader requires the mixin");
+      @warn("_notificationInformation_header_locationStylization to be defined.");
+      @include _notificationInformation_header_locationStylization();
+    }
+}
+
+//header::generateSubheaderActionButtons: takes selector of our generated navs (inside
+//of our pug mixin and uses an iterface which includes defining the mixin
+//_notificationInformation_header_subheaderButtonContainerStyles() and
+//_notificationInformation_header_subheaderButtonStyles() which should give
+//selectors and unique styles to the buttons created in the first argument
+//of the pug mixin, which is defined as a list of lists of a buttons text
+//and it's cooresponding selector (placed second in the sublist)
+@mixin _notificationInformation_header_generateSubheaderActionButtons($selector) {
+    #{$selector}{
+      @warn("Utilizing _notificationInformation_header_generateSubheaderActionButtons requires the mixins");
+      @warn("_notificationInformation_header_subheaderButtonContainerStyles and _notificationContainer_header_subheaderButtonStyles() to be defined.");
+      @include _notificationInformation_header_subheaderButtonContainerStyles();
+      @include _notificationInformation_header_subheaderButtonStyles();
     }
 }

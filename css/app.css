@@ -195,3 +195,31 @@
 
 .food-message-location .current-data {
   color: black; }
+
+.button-container * {
+  font-family: "Source Sans Pro";
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0 !important;
+  border: none;
+  border-radius: 0px !important;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  outline: 0;
+  padding: 0 1rem;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  background: #cccccc;
+  color: white;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer; }
+
+.button-container a:hover {
+  background: white;
+  text-decoration: none; }
+
+.button-container .archive-button {
+  margin-right: 10px !important; }
