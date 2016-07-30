@@ -79,13 +79,6 @@
   .p-l-0-mobile {
     padding-left: 0px !important; } }
 
-.full-page-background {
-  background: url("/img/primary_background.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 .n-container .remove-padding-right-mobile {
   padding-right: 0px; }
 

@@ -1,6 +1,6 @@
 @import "generation";
 
-@mixin _notification_header_headerStylization(){
+@mixin _notificationContainer_header_headerStylization(){
     font-family: "Source Sans Pro";
     color: black;
     padding-top: 20px;
@@ -9,9 +9,9 @@
     }
 }
 
-@include _notification_header_generateHeader(".food-log");
+@include _notificationContainer_header_generateHeader(".food-log");
 
-@mixin _notification_header_navStylization(){
+@mixin _notificationContainer_header_navStylization(){
     font-family: "Source Sans Pro";
     color: lighten(black, 60%);
     &:hover{
@@ -19,7 +19,7 @@
     }
 }
 
-@mixin _notification_header_navActiveStylization(){
+@mixin _notificationContainer_header_navActiveStylization(){
     font-family: "Source Sans Pro";
     color: black;
     font-weight: 700;
@@ -28,9 +28,9 @@
     }
 }
 
-@include _notification_header_generateNavStyle(".food-navigation");
+@include _notificationContainer_header_generateNavStyle(".food-navigation");
 
-@mixin _notification_header_locationStylization() {
+@mixin _notificationContainer_header_locationStylization() {
     font-weight: 700;
     font-family: "Source Sans Pro";
     color: black;
@@ -46,4 +46,4 @@
     }
 }
 
-@include _notification_header_generateLocationStyle(".iteration-location")
+@include _notificationContainer_header_generateLocationStyle(".iteration-location")

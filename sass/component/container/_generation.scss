@@ -1,12 +1,12 @@
 //container::generateNContainer: takes a selector to a parent N container and it's
 //submodules selectors and applies an interface to them for stylization.
-@mixin _notification_container_generateNContainer($selector, $subcomponentSelector){
+@mixin _notificationContainer_container_generateNContainer($selector, $subcomponentSelector){
     #{$selector}{
-	@warn("Utilizing _notification_container_generateNContainer requires the mixin:");
-	@warn("_notification_container_stylizeNContainer() and _notification_container_stylizeSubColumns() to be defined.");
-	@include _notification_container_stylizeNContainer();
+	@warn("Utilizing _notificationContainer_container_generateNContainer requires the mixin:");
+	@warn("_notificationContainer_container_stylizeNContainer() and _notification_container_stylizeSubColumns() to be defined.");
+	@include _notificationContainer_container_stylizeNContainer();
 	#{$subcomponentSelector}{
-	  @include _notification_container_stylizeSubColumns();
+	  @include _notificationContainer_container_stylizeSubColumns();
 	}
     }
 }
@@ -15,31 +15,31 @@
 
 //container::generateSubmodulePerson: takes a selector to a submodule 
 //selector and applies an interface to them for stylization.
-@mixin _notification_container_generateSubmodulePerson($selector){
+@mixin _notificationContainer_container_generateSubmodulePerson($selector){
     #{$selector}{
-	@warn("Utilizing _notification_container_generateSubmodulePerson requires the mixin:");
-	@warn("_notification_container_stylizeSubmodulePerson");
-	@include _notification_container_stylizeSubmodulePerson();
+	@warn("Utilizing _notificationContainer_container_generateSubmodulePerson requires the mixin:");
+	@warn("_notificationContainer_container_stylizeSubmodulePerson");
+	@include _notificationContainer_container_stylizeSubmodulePerson();
     }
 }
 
 //container::generateSubmoduleEmailHeader: takes a selector to a submodule 
 //selector and applies an interface to them for stylization.
-@mixin _notification_container_generateSubmoduleEmailHeader($selector){
+@mixin _notificationContainer_container_generateSubmoduleEmailHeader($selector){
     #{$selector}{
-	@warn("Utilizing _notification_container_generateSubmodulePerson requires the mixin:");
-	@warn("_notification_container_stylizeSubmoduleEmailHeader");
-	@include _notification_container_stylizeSubmoduleEmailHeader();
+	@warn("Utilizing _notificationContainer_container_generateSubmodulePerson requires the mixin:");
+	@warn("_notificationContainer_container_stylizeSubmoduleEmailHeader");
+	@include _notificationContainer_container_stylizeSubmoduleEmailHeader();
     }
 }
 
 //container::generateSubmoduleEmailHeader: takes a selector to a submodule 
 //selector and applies an interface to them for stylization.
-@mixin _notification_container_generateSubmoduleDate($selector){
+@mixin _notificationContainer_container_generateSubmoduleDate($selector){
     #{$selector}{
-	@warn("Utilizing _notification_container_generateSubmoduleDate requires the mixin:");
-	@warn("_notification_container_stylizeSubmoduleDate");
-	@include _notification_container_stylizeSubmoduleDate();
+	@warn("Utilizing _notificationContainer_container_generateSubmoduleDate requires the mixin:");
+	@warn("_notificationContainer_container_stylizeSubmoduleDate");
+	@include _notificationContainer_container_stylizeSubmoduleDate();
     }
 }
 
