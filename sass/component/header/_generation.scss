@@ -18,10 +18,32 @@
 @mixin _notificationContainer_header_generateNavStyle($selector) {
     #{$selector}{
       @warn("Utilizing _notificationContainer_header_generateHeader requires the mixin");
-      @warn("_notificationContainer_header_navStylization and _notification_header_navActiveStylization() to be defined.");
+      @warn("_notificationContainer_header_navStylization() and _notification_header_navActiveStylization() to be defined.");
       @include _notificationContainer_header_navStylization();
       &-active{
         @include _notificationContainer_header_navActiveStylization();
+      }
+    }
+}
+
+//header::generateSubheaderNavigation: takes selector of our generated navs (inside
+//of our pug mixin and uses an iterface which includes defining the mixin
+//_notificationContainer_header_subheaderStylization() 
+@mixin _notificationContainer_header_generateSubheaderNavigation($selector) {
+    #{$selector}{
+      @warn("Utilizing _notificationContainer_header_generateSubheaderNavigation requires the mixins");
+      @warn("_notificationContainer_header_subheaderStylization(), _notificationContainer_header_subheaderDividerStylization() and _notificationContainer_header_subheaderDataStylization() to be defined.");
+      @include _notificationContainer_header_subheaderStylization();
+      .current-parent{
+        @include _notificationContainer_header_subheaderParentStylization();
+      }
+
+      .current-divider{
+        @include _notificationContainer_header_subheaderDividerStylization();
+      }
+
+      .current-data{
+        @include _notificationContainer_header_subheaderDataStylization();
       }
     }
 }

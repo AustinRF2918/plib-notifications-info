@@ -9,7 +9,7 @@
     }
 }
 
-@include _notificationContainer_header_generateHeader(".food-log");
+@include _notificationContainer_header_generateHeader(".food-message");
 
 @mixin _notificationContainer_header_navStylization(){
     font-family: "Source Sans Pro";
@@ -47,3 +47,27 @@
 }
 
 @include _notificationContainer_header_generateLocationStyle(".iteration-location")
+
+@mixin _notificationContainer_header_subheaderStylization() {
+    * {
+        font-family: "Source Sans Pro";
+	font-weight: 600;
+	font-size: 22px;
+    }
+};
+
+@mixin _notificationContainer_header_subheaderParentStylization() {
+    color: #2196F3;
+};
+
+@mixin _notificationContainer_header_subheaderDividerStylization() {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: lighten(black, 60%);
+};
+
+@mixin _notificationContainer_header_subheaderDataStylization() {
+    color: black;
+};
+
+@include _notificationContainer_header_generateSubheaderNavigation(".food-message-location");

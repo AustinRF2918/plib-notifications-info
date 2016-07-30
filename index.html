@@ -34,6 +34,10 @@
   <!--sass/component/header/ header::generateSubheaderLocation-->
   <!--takes the name of the "iterable" that we are displaying -->
   <!--as well as it's range, and it's selector-->
+  <!--This mixin corresponds to the mixins contained within-->
+  <!--sass/component/header/ header::generateSubheaderActionButtons-->
+  <!--takes the name of the "iterable" that we are displaying -->
+  <!--as well as it's range, and it's selector-->
   <!--NOTE: MUST BE REFACTORED INTO SEPERATE MODULE AT LATER-->
   <!--DATE!-->
   <!--This mixin corresponds to the mixins contained within-->
@@ -55,19 +59,17 @@
   <!--subcomponent styling.-->
   <body>
     <div class="container">
-        <div class="row food-log">
+        <div class="row food-message">
           <div class="col-md-12">
-            <h2>Food Log</h2>
+            <h2>Food Message</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-6">
-              <nav class="nav nav-inline"><a class="nav-link btn-flat active food-navigation food-navigation-active">Foods</a><a class="nav-link btn-flat food-navigation">Archive</a>
-              </nav>
+              <p class="current-location food-message-location"><span class="current-parent">Foods</span> <span class="current-divider">/</span> <span class="current-data">Cool New Apple</span></p>
           </div>
           <div class="col-xs-6 text-md-right">
-              <div class="iteration-location">
-                <p class="text-xs-right">1 - 10 of 21 Entries</p>
+              <div class="iteration-location"><a class="action-button archive-button">Archive</a><a class="action-button delete-button">Delete</a>
               </div>
           </div>
         </div>

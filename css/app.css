@@ -149,11 +149,11 @@
     .email-date {
       display: none; } }
 
-.food-log {
+.food-message {
   font-family: "Source Sans Pro";
   color: black;
   padding-top: 20px; }
-  .food-log * {
+  .food-message * {
     font-weight: 600; }
 
 .food-navigation {
@@ -179,3 +179,19 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
+
+.food-message-location * {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-size: 22px; }
+
+.food-message-location .current-parent {
+  color: #2196F3; }
+
+.food-message-location .current-divider {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #999999; }
+
+.food-message-location .current-data {
+  color: black; }
