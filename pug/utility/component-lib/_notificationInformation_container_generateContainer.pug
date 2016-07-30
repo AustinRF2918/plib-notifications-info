@@ -4,7 +4,7 @@
 //This mixin corresponds to the mixins contained within
 //sass/component/container/. container::generateSubmodulePerson
 //IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.
-mixin _login_container_SUBMODULE_personModule(selectorName, name, state, city, imgPath)
+mixin _notificationInformation_container_SUBMODULE_personModule(selectorName, name, state, city, imgPath)
   div(class=[selectorName])
     .col-md-3
       img.user-img(src=imgPath)
@@ -15,7 +15,7 @@ mixin _login_container_SUBMODULE_personModule(selectorName, name, state, city, i
 //This mixin corresponds to the mixins contained within
 //sass/component/container/. container::generateSubmoduleEmailHeader
 //IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.
-mixin _login_container_SUBMODULE_emailHeaderModule(selectorName, header, preview, isNew)
+mixin _notificationInformation_container_SUBMODULE_emailHeaderModule(selectorName, header, preview, isNew)
   div(class=[selectorName])
     .col-md-12
       if !isNew
@@ -28,7 +28,7 @@ mixin _login_container_SUBMODULE_emailHeaderModule(selectorName, header, preview
 //This mixin corresponds to the mixins contained within
 //sass/component/container/. container::generateSubmoduleDate
 //IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.
-mixin _login_container_SUBMODULE_dateModule(selectorName, day, month)
+mixin _notificationInformation_container_SUBMODULE_dateModule(selectorName, day, month)
   div(class=[selectorName])
     .col-md-12
         p.email-dm #{day} #{month}
@@ -36,7 +36,7 @@ mixin _login_container_SUBMODULE_dateModule(selectorName, day, month)
 //This mixin corresponds to the mixins contained within
 //no Sass file: it must be declared within an interface
 //mixin in the container::generateNContainer mixin.
-mixin _login_container_generateSubcolumn(selectorName, className)
+mixin _notificationInformation_container_generateSubcolumn(selectorName, className)
   div(class=[selectorName, className])
     block
 
@@ -45,13 +45,13 @@ mixin _login_container_generateSubcolumn(selectorName, className)
 //takes a simple selector and generates it. Within the row
 //one should use the generateSubcolumn with a classname for
 //subcomponent styling.
-mixin _login_container_generateNContainer(selectorName, breakSelectorName, subcomponentSelector)
+mixin _notificationInformation_container_generateNContainer(selectorName, breakSelectorName, subcomponentSelector)
   div(class=["row", selectorName])
-    +_login_container_generateSubcolumn(subcomponentSelector, "col-md-4 col-xs-4 remove-padding-right-mobile")
-      +_login_container_SUBMODULE_personModule("contactee", "French Fries", "366 kCal", "12.7 Fitness Score", "img/user-image.png")
-    +_login_container_generateSubcolumn(subcomponentSelector, "col-md-6 col-xs-8 remove-padding-left-mobile")
-      +_login_container_SUBMODULE_emailHeaderModule("email-data", "Bad decision.", "This will take you 22 minutes to run at a jogging pace.", false)
-    +_login_container_generateSubcolumn(subcomponentSelector, "col-md-2")
-      +_login_container_SUBMODULE_dateModule("email-date", "22", "July")
+    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-md-4 col-xs-4 remove-padding-right-mobile")
+      +_notificationInformation_container_SUBMODULE_personModule("contactee", "French Fries", "366 kCal", "12.7 Fitness Score", "img/user-image.png")
+    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-md-6 col-xs-8 remove-padding-left-mobile")
+      +_notificationInformation_container_SUBMODULE_emailHeaderModule("email-data", "Bad decision.", "This will take you 22 minutes to run at a jogging pace.", false)
+    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-md-2")
+      +_notificationInformation_container_SUBMODULE_dateModule("email-date", "22", "July")
   .row
     hr(class=[breakSelectorName, "m-y-0"])
