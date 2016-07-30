@@ -13,6 +13,23 @@ mixin _notificationInformation_container_SUBMODULE_messageModule(selectorName, n
       <p class="user-message"> !{message} </p>
 
 //This mixin corresponds to the mixins contained within
+//sass/component/container/. container::generateSubmoduleReply
+//IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.
+mixin _notificationInformation_container_SUBMODULE_replyModule(selectorName, imgPath, btnName)
+  div(class=[selectorName])
+    .col-md-1.img-container
+      img.user-img(src=imgPath)
+    .col-md-11.content-container
+      .form-group
+        textarea(class="form-control" rows="5")
+      a(class=btnName) Reply
+</div>
+      p <span class="user-name">#{name}</span> <span class="message-date"> #{day} #{year}</span>
+      <p class="user-message"> !{message} </p>
+
+
+
+//This mixin corresponds to the mixins contained within
 //no Sass file: it must be declared within an interface
 //mixin in the container::generateMContainer mixin.
 mixin _notificationInformation_container_generateSubcolumn(selectorName, className)
@@ -28,6 +45,19 @@ mixin _notificationInformation_container_generateMContainer(selectorName, breakS
   div(class=["row", selectorName])
     +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-xs-12")
       +_notificationInformation_container_SUBMODULE_messageModule("contactee", "French Fries", "366 kCal Es gibt eine schoenes madchen wer in Deutschland lebt aber sie ist kaputt und alles geht mit ihr sued, leidir muss man manchinmal lass es zu und einach wieder anfangen und fang der koerper an und andere sache das ich nicht weiss ja? Ich meine wie koennte jemand so geil sein dass die DASS machen manchmal mussen wir zuschauen auf was geht ab and wirklich denken was koennte ich dafuer machen? Koennte ich etwas wo es schoen ist tun oder soll ich weglaufen oder was! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal und wie koennte das ueberhaupt sein? Dass jemand einfach hier lauft und mir sagt 'Ja du hast das gewonnen!", "July", "22", "img/user-image.png")
+  
+  .row
+    hr(class=[breakSelectorName, "m-y-0"])
+
+//This mixin corresponds to the mixins contained within
+//sass/component/container/. container::generateRContainer
+//takes a simple selector and generates it. Within the row
+//one should use the generateSubcolumn with a classname for
+//subcomponent styling.
+mixin _notificationInformation_container_generateRContainer(selectorName, breakSelectorName, subcomponentSelector)
+  div(class=["row", selectorName])
+    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-xs-12")
+      +_notificationInformation_container_SUBMODULE_replyModule("contactee", "img/user-image.png", "submit-button")
   
   .row
     hr(class=[breakSelectorName, "m-y-0"])

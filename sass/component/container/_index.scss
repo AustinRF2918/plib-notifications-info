@@ -14,6 +14,46 @@
 
 @include _notificationContainer_container_generateMContainer(".m-container", ".m-container-component");
 
+@mixin _notificationContainer_container_stylizeRContainer() {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+};
+
+@mixin _notificationContainer_container_stylizeRContainerButton() {
+font-family: "Source Sans Pro";
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin: 0 !important;
+	border: none;
+	border-radius: 0px !important;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	outline: 0;
+	padding: 0 1rem;
+	vertical-align: middle;
+	-webkit-tap-highlight-color: transparent;
+	background-color: #311B92;
+	color: white;
+	text-align: center;
+	letter-spacing: .5px;
+	transition: .2s ease-out;
+	cursor: pointer;
+
+	&:hover{
+	    background: #8e68cf;
+	    text-decoration: none;
+	    color: white;
+	    transition-duration: 0.2s;
+	    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
+	}
+};
+
+@include _notificationContainer_container_generateRContainer(".r-container", ".submit-button");
+
+
+
 //Include as library module at later point.
 @mixin _notificationContainer_container_stylizeSubmoduleMessage(){
     .user-name, .message-date {

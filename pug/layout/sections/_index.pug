@@ -4,12 +4,15 @@ body
   .container
     +_notificationInformation_header_generateHeader("Food Message", "food-message")
     +_notificationInformation_header_generateSubheaderNavigation("food-path")
-      .col-xs-6
+      .col-md-6
         +_notificationInformation_header_generateNavStyle("Foods", "Cool New Apple", "/", "food-message-location")
-      .col-xs-6.text-md-right
+      .col-md-6.text-md-right
         +_notificationInformation_header_generateSubheaderActionButtons("action-button", [["Archive", "archive-button"], ["Delete", "delete-button"]] ,"button-container")
     .p-t-1
     +_notificationInformation_header_generateHeaderBreak()
   .container
     each val in [1]
       +_notificationInformation_container_generateMContainer("m-container", "m-container-break", "m-container-component")
+  .container
+      +_notificationInformation_container_generateRContainer("r-container", "r-container-break", "r-container-component")
+     

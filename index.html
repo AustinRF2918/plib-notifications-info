@@ -40,10 +40,19 @@
   <!--sass/component/container/. container::generateSubmoduleMessage-->
   <!--IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.-->
   <!--This mixin corresponds to the mixins contained within-->
+  <!--sass/component/container/. container::generateSubmoduleReply-->
+  <!--IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.--></div>
+  <p><span class="user-name"></span> <span class="message-date">  </span></p><p class="user-message">  </p>
+  <!--This mixin corresponds to the mixins contained within-->
   <!--no Sass file: it must be declared within an interface-->
   <!--mixin in the container::generateMContainer mixin.-->
   <!--This mixin corresponds to the mixins contained within-->
   <!--sass/component/container/. container::generateMContainer-->
+  <!--takes a simple selector and generates it. Within the row-->
+  <!--one should use the generateSubcolumn with a classname for-->
+  <!--subcomponent styling.-->
+  <!--This mixin corresponds to the mixins contained within-->
+  <!--sass/component/container/. container::generateRContainer-->
   <!--takes a simple selector and generates it. Within the row-->
   <!--one should use the generateSubcolumn with a classname for-->
   <!--subcomponent styling.-->
@@ -55,10 +64,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6">
+          <div class="col-md-6">
               <p class="current-location food-message-location"><span class="current-parent">Foods</span> <span class="current-divider">/</span> <span class="current-data">Cool New Apple</span></p>
           </div>
-          <div class="col-xs-6 text-md-right">
+          <div class="col-md-6 text-md-right">
               <div class="button-container"><a class="action-button archive-button">Archive</a><a class="action-button delete-button">Delete</a>
               </div>
           </div>
@@ -81,6 +90,23 @@
         </div>
         <div class="row">
           <hr class="m-container-break m-y-0"/>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row r-container">
+            <div class="r-container-component col-xs-12">
+                <div class="contactee">
+                  <div class="col-md-1 img-container"><img class="user-img" src="img/user-image.png"/></div>
+                  <div class="col-md-11 content-container">
+                    <div class="form-group">
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div><a class="submit-button">Reply</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <hr class="r-container-break m-y-0"/>
         </div>
     </div>
   </body>

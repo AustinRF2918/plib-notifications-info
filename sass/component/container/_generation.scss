@@ -11,6 +11,19 @@
     }
 }
 
+//container::generateRContainer: takes a selector to a parent M container and it's
+//submodules selectors and applies an interface to them for stylization.
+@mixin _notificationContainer_container_generateRContainer($selector, $buttonSelector){
+    #{$selector}{
+	@warn("Utilizing _notificationContainer_container_generateRContainer requires the mixin:");
+	@warn("_notificationContainer_container_stylizeRContainer() and _notification_container_stylizeRContainerButton() to be defined.");
+	@include _notificationContainer_container_stylizeRContainer();
+	#{$buttonSelector}{
+	  @include _notificationContainer_container_stylizeRContainerButton();
+	}
+    }
+}
+
 //Refactor later into seperate modules.
 
 //container::generateSubmoduleMessage: takes a selector to a submodule 
