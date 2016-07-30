@@ -2,56 +2,32 @@
 //DATE!
 
 //This mixin corresponds to the mixins contained within
-//sass/component/container/. container::generateSubmodulePerson
+//sass/component/container/. container::generateSubmoduleMessage
 //IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.
-mixin _notificationInformation_container_SUBMODULE_personModule(selectorName, name, state, city, imgPath)
+mixin _notificationInformation_container_SUBMODULE_messageModule(selectorName, name, message, day, year, imgPath)
   div(class=[selectorName])
-    .col-md-3
+    .col-md-1.img-container
       img.user-img(src=imgPath)
-    .col-md-9
-      p.user-name=name
-      p.user-location #{state}, #{city}
-    
-//This mixin corresponds to the mixins contained within
-//sass/component/container/. container::generateSubmoduleEmailHeader
-//IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.
-mixin _notificationInformation_container_SUBMODULE_emailHeaderModule(selectorName, header, preview, isNew)
-  div(class=[selectorName])
-    .col-md-12
-      if !isNew
-        p.email-header=header
-        p.email-preview=preview
-      else
-        p.email-header <span class="email-new"></span> #{header}
-        p.email-preview=preview
+    .col-md-11.content-container
+      p <span class="user-name">#{name}</span> <span class="message-date"> #{day} #{year}</span>
+      <p class="user-message"> !{message} </p>
 
 //This mixin corresponds to the mixins contained within
-//sass/component/container/. container::generateSubmoduleDate
-//IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.
-mixin _notificationInformation_container_SUBMODULE_dateModule(selectorName, day, month)
-  div(class=[selectorName])
-    .col-md-12
-        p.email-dm #{day} #{month}
-   
-//This mixin corresponds to the mixins contained within
 //no Sass file: it must be declared within an interface
-//mixin in the container::generateNContainer mixin.
+//mixin in the container::generateMContainer mixin.
 mixin _notificationInformation_container_generateSubcolumn(selectorName, className)
   div(class=[selectorName, className])
     block
 
 //This mixin corresponds to the mixins contained within
-//sass/component/container/. container::generateNContainer
+//sass/component/container/. container::generateMContainer
 //takes a simple selector and generates it. Within the row
 //one should use the generateSubcolumn with a classname for
 //subcomponent styling.
-mixin _notificationInformation_container_generateNContainer(selectorName, breakSelectorName, subcomponentSelector)
+mixin _notificationInformation_container_generateMContainer(selectorName, breakSelectorName, subcomponentSelector)
   div(class=["row", selectorName])
-    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-md-4 col-xs-4 remove-padding-right-mobile")
-      +_notificationInformation_container_SUBMODULE_personModule("contactee", "French Fries", "366 kCal", "12.7 Fitness Score", "img/user-image.png")
-    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-md-6 col-xs-8 remove-padding-left-mobile")
-      +_notificationInformation_container_SUBMODULE_emailHeaderModule("email-data", "Bad decision.", "This will take you 22 minutes to run at a jogging pace.", false)
-    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-md-2")
-      +_notificationInformation_container_SUBMODULE_dateModule("email-date", "22", "July")
+    +_notificationInformation_container_generateSubcolumn(subcomponentSelector, "col-xs-12")
+      +_notificationInformation_container_SUBMODULE_messageModule("contactee", "French Fries", "366 kCal Es gibt eine schoenes madchen wer in Deutschland lebt aber sie ist kaputt und alles geht mit ihr sued, leidir muss man manchinmal lass es zu und einach wieder anfangen und fang der koerper an und andere sache das ich nicht weiss ja? Ich meine wie koennte jemand so geil sein dass die DASS machen manchmal mussen wir zuschauen auf was geht ab and wirklich denken was koennte ich dafuer machen? Koennte ich etwas wo es schoen ist tun oder soll ich weglaufen oder was! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal und wie koennte das ueberhaupt sein? Dass jemand einfach hier lauft und mir sagt 'Ja du hast das gewonnen!", "July", "22", "img/user-image.png")
+  
   .row
     hr(class=[breakSelectorName, "m-y-0"])

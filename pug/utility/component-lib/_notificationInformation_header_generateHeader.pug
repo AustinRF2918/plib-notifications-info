@@ -27,14 +27,6 @@ mixin _notificationInformation_header_generateNavStyle(parent, current, dividerT
   p(class=["current-location", selectorName]) <span class="current-parent">#{parent}</span> <span class="current-divider">#{dividerText}</span> <span class="current-data">#{current}</span>
 
 //This mixin corresponds to the mixins contained within
-//sass/component/header/ header::generateSubheaderLocation
-//takes the name of the "iterable" that we are displaying 
-//as well as it's range, and it's selector
-mixin _notificationInformation_header_generateSubheaderLocation(iterableName, startRange, endRange, total, selectorName)
-  div(class=[selectorName])
-    p.text-xs-right #{startRange} - #{endRange} of #{total} #{iterableName}
-  
-//This mixin corresponds to the mixins contained within
 //sass/component/header/ header::generateSubheaderActionButtons
 //takes the name of the "iterable" that we are displaying 
 //as well as it's range, and it's selector

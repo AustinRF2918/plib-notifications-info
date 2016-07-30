@@ -1,32 +1,29 @@
 @import 'generation';
 
 @mixin _notificationContainer_container_stylizeNContainer() {
-    .remove-padding-right-mobile{
-       padding-right: 0px;
-    }
-
-    .remove-padding-left-mobile{
-       padding-left: 0px;
-    }
-
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
 };
 
 @mixin _notificationContainer_container_stylizeSubColumns() {
     * {
 	margin: 0px;
     }
-
-
-    height: 100px;
 };
 
-@include _notificationContainer_container_generateNContainer(".n-container", ".n-container-component");
+@include _notificationContainer_container_generateMContainer(".m-container", ".m-container-component");
 
 //Include as library module at later point.
-@mixin _notificationContainer_container_stylizeSubmodulePerson(){
-    height: 100%;
-    .user-name, .user-location {
+@mixin _notificationContainer_container_stylizeSubmoduleMessage(){
+    .user-name, .message-date {
       font-family: "Source Sans Pro";
+    }
+
+    .message-date{
+	font-size: 14px;
+	color: lighten(black, 40%);
+	padding-left: 10px;
     }
 
     .user-name {
@@ -37,9 +34,10 @@
 	color: lighten(black, 40%);
     }
 
-    .col-md-3 {
+    .img-container {
 	img {
 	    max-width: 60px;
+	    position: relative;
 	}
 	@media screen and (max-width: 767px){
 	  img {
@@ -48,30 +46,26 @@
 	      padding-right: 0px !important;
 	  }
 	}
-
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
     }
 
-    .col-md-9 {
+    .content-container {
         @media screen and (max-width: 767px) {
 	  padding-left: 0px !important;
 	  padding-right: 10px !important;
         }
-	position: relative;
-	transform: translateY(-50%);
-	top: 50%;
+    }
+
+    .user-message {
+	margin-top: 10px;
     }
 }
 
-@include _notificationContainer_container_generateSubmodulePerson(".contactee");
+@include _notificationContainer_container_generateSubmoduleMessage(".contactee");
 
 
 //Include as library module at later point.
 @mixin _notificationContainer_container_stylizeSubmoduleEmailHeader(){
 
-      height: 100%;
     * {
       font-family: "Source Sans Pro";
     }

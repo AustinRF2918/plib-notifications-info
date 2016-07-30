@@ -79,63 +79,62 @@
   .p-l-0-mobile {
     padding-left: 0px !important; } }
 
-.n-container .remove-padding-right-mobile {
-  padding-right: 0px; }
-
-.n-container .remove-padding-left-mobile {
-  padding-left: 0px; }
-
-.n-container .n-container-component {
-  height: 100px; }
-  .n-container .n-container-component * {
+.m-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: auto; }
+  .m-container .m-container-component * {
     margin: 0px; }
 
-.contactee {
-  height: 100%; }
-  .contactee .user-name, .contactee .user-location {
-    font-family: "Source Sans Pro"; }
-  .contactee .user-name {
-    font-weight: 600; }
-  .contactee .user-location {
-    color: #666666; }
-  .contactee .col-md-3 {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%); }
-    .contactee .col-md-3 img {
-      max-width: 60px; }
-    @media screen and (max-width: 767px) {
-      .contactee .col-md-3 img {
-        display: none;
-        padding-left: 0px !important;
-        padding-right: 0px !important; } }
-  .contactee .col-md-9 {
-    position: relative;
-    transform: translateY(-50%);
-    top: 50%; }
-    @media screen and (max-width: 767px) {
-      .contactee .col-md-9 {
-        padding-left: 0px !important;
-        padding-right: 10px !important; } }
+.contactee .user-name, .contactee .message-date {
+  font-family: "Source Sans Pro"; }
 
-.email-data {
-  height: 100%; }
-  .email-data * {
-    font-family: "Source Sans Pro"; }
-  .email-data .col-md-12 {
-    top: 50%;
-    transform: translateY(-50%); }
-    @media screen and (max-width: 767px) {
-      .email-data .col-md-12 {
-        padding-left: 10px !important;
-        padding-right: 0px !important; } }
-    .email-data .col-md-12 .email-header {
-      font-weight: 800; }
-    .email-data .col-md-12 .email-preview {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      color: #666666; }
+.contactee .message-date {
+  font-size: 14px;
+  color: #666666;
+  padding-left: 10px; }
+
+.contactee .user-name {
+  font-weight: 600; }
+
+.contactee .user-location {
+  color: #666666; }
+
+.contactee .img-container img {
+  max-width: 60px;
+  position: relative; }
+
+@media screen and (max-width: 767px) {
+  .contactee .img-container img {
+    display: none;
+    padding-left: 0px !important;
+    padding-right: 0px !important; } }
+
+@media screen and (max-width: 767px) {
+  .contactee .content-container {
+    padding-left: 0px !important;
+    padding-right: 10px !important; } }
+
+.contactee .user-message {
+  margin-top: 10px; }
+
+.email-data * {
+  font-family: "Source Sans Pro"; }
+
+.email-data .col-md-12 {
+  top: 50%;
+  transform: translateY(-50%); }
+  @media screen and (max-width: 767px) {
+    .email-data .col-md-12 {
+      padding-left: 10px !important;
+      padding-right: 0px !important; } }
+  .email-data .col-md-12 .email-header {
+    font-weight: 800; }
+  .email-data .col-md-12 .email-preview {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666666; }
 
 .email-date {
   height: 100%; }

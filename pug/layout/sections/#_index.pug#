@@ -13,3 +13,5 @@ body
   .container
     each val in [1]
       +_notificationInformation_container_generateMContainer("m-container", "m-container-break", "m-container-component")
+  .container
+     

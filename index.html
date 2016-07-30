@@ -31,29 +31,19 @@
   <!-- NOTE: Will use customName as the selector for inactive navs-->
   <!-- and customName.customName"-active" for active navs. -->
   <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/header/ header::generateSubheaderLocation-->
-  <!--takes the name of the "iterable" that we are displaying -->
-  <!--as well as it's range, and it's selector-->
-  <!--This mixin corresponds to the mixins contained within-->
   <!--sass/component/header/ header::generateSubheaderActionButtons-->
   <!--takes the name of the "iterable" that we are displaying -->
   <!--as well as it's range, and it's selector-->
   <!--NOTE: MUST BE REFACTORED INTO SEPERATE MODULE AT LATER-->
   <!--DATE!-->
   <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateSubmodulePerson-->
-  <!--IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.-->
-  <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateSubmoduleEmailHeader-->
-  <!--IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.-->
-  <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateSubmoduleDate-->
+  <!--sass/component/container/. container::generateSubmoduleMessage-->
   <!--IT IS TO BE MOVED TO A SUBMODULE DIRECTORY AT A LATER POINT.-->
   <!--This mixin corresponds to the mixins contained within-->
   <!--no Sass file: it must be declared within an interface-->
-  <!--mixin in the container::generateNContainer mixin.-->
+  <!--mixin in the container::generateMContainer mixin.-->
   <!--This mixin corresponds to the mixins contained within-->
-  <!--sass/component/container/. container::generateNContainer-->
+  <!--sass/component/container/. container::generateMContainer-->
   <!--takes a simple selector and generates it. Within the row-->
   <!--one should use the generateSubcolumn with a classname for-->
   <!--subcomponent styling.-->
@@ -79,295 +69,18 @@
         </div>
     </div>
     <div class="container">
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
+        <div class="row m-container">
+            <div class="m-container-component col-xs-12">
                 <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
+                  <div class="col-md-1 img-container"><img class="user-img" src="img/user-image.png"/></div>
+                  <div class="col-md-11 content-container">
+                    <p><span class="user-name">French Fries</span> <span class="message-date"> July 22</span></p><p class="user-message"> 366 kCal Es gibt eine schoenes madchen wer in Deutschland lebt aber sie ist kaputt und alles geht mit ihr sued, leidir muss man manchinmal lass es zu und einach wieder anfangen und fang der koerper an und andere sache das ich nicht weiss ja? Ich meine wie koennte jemand so geil sein dass die DASS machen manchmal mussen wir zuschauen auf was geht ab and wirklich denken was koennte ich dafuer machen? Koennte ich etwas wo es schoen ist tun oder soll ich weglaufen oder was! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal! <br><br> Ach ja, und auch muss ich mich frage warum jede mal das ich dich frage, du sagst das es keine gibt! Ja ja manchmal muss es so sein dass es ja das richtig nicht gibt, aber das nur manchmal und wie koennte das ueberhaupt sein? Dass jemand einfach hier lauft und mir sagt 'Ja du hast das gewonnen! </p>
                   </div>
                 </div>
             </div>
         </div>
         <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
-        </div>
-        <div class="row n-container">
-            <div class="n-container-component col-md-4 col-xs-4 remove-padding-right-mobile">
-                <div class="contactee">
-                  <div class="col-md-3"><img class="user-img" src="img/user-image.png"/></div>
-                  <div class="col-md-9">
-                    <p class="user-name">French Fries</p>
-                    <p class="user-location">366 kCal, 12.7 Fitness Score</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-6 col-xs-8 remove-padding-left-mobile">
-                <div class="email-data">
-                  <div class="col-md-12">
-                    <p class="email-header">Bad decision.</p>
-                    <p class="email-preview">This will take you 22 minutes to run at a jogging pace.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="n-container-component col-md-2">
-                <div class="email-date">
-                  <div class="col-md-12">
-                    <p class="email-dm">22 July</p>
-                  </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          <hr class="n-container-break m-y-0"/>
+          <hr class="m-container-break m-y-0"/>
         </div>
     </div>
   </body>
