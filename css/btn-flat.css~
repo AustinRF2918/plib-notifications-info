@@ -1,0 +1,22 @@
+.btn-flat {
+  box-shadow: none;
+  background-color: transparent;
+  color: #343434;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.btn-flat:focus, .btn-flat:active {
+  background-color: transparent;
+}
+
+.btn-flat:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+
+.btn-flat.disabled {
+  color: #b3b3b3;
+  cursor: default;
+}
+

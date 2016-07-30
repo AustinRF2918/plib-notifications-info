@@ -1,0 +1,124 @@
+@import 'generation';
+
+@mixin _notification_container_stylizeNContainer() {
+    .remove-padding-right-mobile{
+       padding-right: 0px;
+    }
+
+    .remove-padding-left-mobile{
+       padding-left: 0px;
+    }
+
+};
+
+@mixin _notification_container_stylizeSubColumns() {
+    * {
+	margin: 0px;
+    }
+
+
+    height: 100px;
+};
+
+@include _notification_container_generateNContainer(".n-container", ".n-container-component");
+
+//Include as library module at later point.
+@mixin _notification_container_stylizeSubmodulePerson(){
+    height: 100%;
+    .user-name, .user-location {
+      font-family: "Source Sans Pro";
+    }
+
+    .user-name {
+        font-weight: 600;
+    }
+
+    .user-location {
+	color: lighten(black, 40%);
+    }
+
+    .col-md-3 {
+	img {
+	    max-width: 60px;
+	}
+	@media screen and (max-width: 767px){
+	  img {
+	      display: none;
+	      padding-left: 0px !important;
+	      padding-right: 0px !important;
+	  }
+	}
+
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+    }
+
+    .col-md-9 {
+        @media screen and (max-width: 767px) {
+	  padding-left: 0px !important;
+	  padding-right: 10px !important;
+        }
+	position: relative;
+	transform: translateY(-50%);
+	top: 50%;
+    }
+}
+
+@include _notification_container_generateSubmodulePerson(".contactee");
+
+
+//Include as library module at later point.
+@mixin _notification_container_stylizeSubmoduleEmailHeader(){
+
+      height: 100%;
+    * {
+      font-family: "Source Sans Pro";
+    }
+
+
+    .col-md-12 {
+     @media screen and (max-width: 767px) {
+	padding-left: 10px !important;
+	padding-right: 0px !important;
+      }
+
+      top: 50%;
+      transform: translateY(-50%);
+
+      .email-header{
+	  font-weight: 800;
+      }
+
+      .email-preview{
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  color: lighten(black, 40%);
+      }
+    }
+}
+
+@include _notification_container_generateSubmoduleEmailHeader(".email-data");
+
+//Include as library module at later point.
+@mixin _notification_container_stylizeSubmoduleDate(){
+
+    height: 100%;
+
+    * {
+      color: lighten(black, 40%);
+      font-family: "Source Sans Pro";
+    }
+
+    .col-md-12 {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media screen and (max-width: 767px) {
+	display: none;
+    }
+}
+
+@include _notification_container_generateSubmoduleDate(".email-date");

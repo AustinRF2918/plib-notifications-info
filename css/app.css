@@ -1,0 +1,188 @@
+.light-text {
+  color: white;
+  opacity: 0.7; }
+  @media screen and (min-width: 768px) {
+    .light-text {
+      font-size: 30px; } }
+  @media screen and (max-width: 767px) {
+    .light-text {
+      font-size: 20px; } }
+
+@media screen and (min-width: 992px) {
+  .extend-full-height {
+    height: 100%; } }
+
+@media screen and (max-width: 991px) {
+  .extend-full-height {
+    height: 100px; } }
+
+.extend-full-width {
+  height: 100%; }
+
+.consistency-hide {
+  color: transparent; }
+
+@media screen and (max-width: 992px) {
+  .no-margin-mobile {
+    margin: 0px; } }
+
+.btn-login {
+  background: #0288D1;
+  padding: 10px 24px 10px 24px;
+  position: relative;
+  top: -2px;
+  margin: 0px;
+  min-width: 88px;
+  border-radius: 0px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  transition-duration: 0.2s; }
+
+.btn-login:hover {
+  background: #01579B;
+  color: white;
+  transition-duration: 0.2s;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26); }
+
+.materialize-form {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0px;
+  line-height: 30px;
+  border-color: transparent;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  transition-duration: 0.1s; }
+  .materialize-form + label {
+    transition-duration: 0.1s; }
+  .materialize-form:focus {
+    border-bottom: 2px solid #00806a; }
+
+@media screen and (max-width: 768px) {
+  .m-t-md-2 {
+    margin-top: 2em; } }
+
+.rel-opl {
+  position: relative;
+  top: -90px; }
+
+@media screen and (max-width: 767px) {
+  .dam {
+    display: none; } }
+
+@media screen and (max-height: 767px) {
+  .p-l-0-mobile {
+    padding-left: 0px !important; } }
+
+.full-page-background {
+  background: url("/img/primary_background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.n-container .remove-padding-right-mobile {
+  padding-right: 0px; }
+
+.n-container .remove-padding-left-mobile {
+  padding-left: 0px; }
+
+.n-container .n-container-component {
+  height: 100px; }
+  .n-container .n-container-component * {
+    margin: 0px; }
+
+.contactee {
+  height: 100%; }
+  .contactee .user-name, .contactee .user-location {
+    font-family: "Source Sans Pro"; }
+  .contactee .user-name {
+    font-weight: 600; }
+  .contactee .user-location {
+    color: #666666; }
+  .contactee .col-md-3 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+    .contactee .col-md-3 img {
+      max-width: 60px; }
+    @media screen and (max-width: 767px) {
+      .contactee .col-md-3 img {
+        display: none;
+        padding-left: 0px !important;
+        padding-right: 0px !important; } }
+  .contactee .col-md-9 {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%; }
+    @media screen and (max-width: 767px) {
+      .contactee .col-md-9 {
+        padding-left: 0px !important;
+        padding-right: 10px !important; } }
+
+.email-data {
+  height: 100%; }
+  .email-data * {
+    font-family: "Source Sans Pro"; }
+  .email-data .col-md-12 {
+    top: 50%;
+    transform: translateY(-50%); }
+    @media screen and (max-width: 767px) {
+      .email-data .col-md-12 {
+        padding-left: 10px !important;
+        padding-right: 0px !important; } }
+    .email-data .col-md-12 .email-header {
+      font-weight: 800; }
+    .email-data .col-md-12 .email-preview {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #666666; }
+
+.email-date {
+  height: 100%; }
+  .email-date * {
+    color: #666666;
+    font-family: "Source Sans Pro"; }
+  .email-date .col-md-12 {
+    top: 50%;
+    transform: translateY(-50%); }
+  @media screen and (max-width: 767px) {
+    .email-date {
+      display: none; } }
+
+.food-log {
+  font-family: "Source Sans Pro";
+  color: black;
+  padding-top: 20px; }
+  .food-log * {
+    font-weight: 600; }
+
+.food-navigation {
+  font-family: "Source Sans Pro";
+  color: #999999; }
+  .food-navigation:hover {
+    cursor: pointer; }
+  .food-navigation-active {
+    font-family: "Source Sans Pro";
+    color: black;
+    font-weight: 700; }
+    .food-navigation-active:hover {
+      cursor: pointer; }
+
+.iteration-location {
+  font-weight: 700;
+  font-family: "Source Sans Pro";
+  color: black;
+  top: 5;
+  height: 36px; }
+  .iteration-location p {
+    margin-bottom: 0px !important;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }

@@ -1,0 +1,20 @@
+@import 'generation';
+
+//See "generation" for more information on this mixin.
+@include _login_background_generateBackgroundOnElement(".full-page-background", "/img/primary_background.jpg");
+
+@mixin _login_container_generateCTAClusterContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0px;
+
+    &::before{
+	position: absolute;
+	content: "";
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(255, 255, 255, 0.3);
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
+    }
+}
+
+

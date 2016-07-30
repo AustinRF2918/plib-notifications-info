@@ -1,0 +1,46 @@
+//This mixin corresponds to the mixins contained within
+//sass/component/header/ header::generateHeader
+//takes the message that will be displayed on the actual 
+//header as well as the selector name to be used within
+//our sass.
+mixin _notification_header_generateHeader(name, selectorName)
+  div(class=["row", selectorName])
+    .col-md-12
+      h2=name
+
+//This mixin corresponds to the mixins contained within
+//sass/component/header/ header::generateSubheaderNavigation
+//takes the message that will be displayed on the actual 
+//header as well as the selector name to be used within
+//our sass.
+mixin _notification_header_generateSubheaderNavigation(name, selectorName)
+  div(class=["row", selectorName])
+    block
+
+//This mixin corresponds to the mixins contained within
+//sass/component/header/ header::generateNavStyle
+//takes the custom names of our navs and also applies Bootstrap 
+//styles to them and then compiles a list inline.
+// NOTE: Will use customName as the selector for inactive navs
+// and customName.customName"-active" for active navs. 
+mixin _notification_header_generateNavStyle(words, selectorName, active)
+  nav.nav.nav-inline
+    each val in words 
+      if active != val
+        a(class=["nav-link", "btn-flat", selectorName])=val
+      else
+        a(class=["nav-link", "btn-flat", "active", selectorName, selectorName+"-active"])=val
+
+//This mixin corresponds to the mixins contained within
+//sass/component/header/ header::generateSubheaderLocation
+//takes the name of the "iterable" that we are displaying 
+//as well as it's range, and it's selector
+mixin _notification_header_generateSubheaderLocation(iterableName, startRange, endRange, total, selectorName)
+  div(class=[selectorName])
+    p.text-xs-right #{startRange} - #{endRange} of #{total} #{iterableName}
+  
+mixin _notification_header_generateHeaderBreak()
+  .row
+    hr(class=["m-y-0"])
+
+
